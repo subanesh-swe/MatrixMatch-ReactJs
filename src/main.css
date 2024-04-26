@@ -1,0 +1,155 @@
+@import url( 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap') ;
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.app {
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    /* background: #262834; */
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.container {
+    /* top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin: 0 auto; */
+    height: fit-content;
+    margin: 0 20px;
+    /*width: 256px;*/
+    width: auto;
+    text-align: center;
+    border: 10px solid #101116;
+    background: #101116;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.matrixStatus {
+    height: 75px;
+    width: 100%;
+    line-height: 75px;
+    text-align: center;
+    border: 2px dashed #f69c55;
+    margin-bottom: 10px;
+    border: 0px;
+    background-color: #10111600;
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 50;
+    letter-spacing: 1px;
+}
+
+.matrix {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(50px, auto);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(50px, auto);
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    /*margin-top: 5px;*/
+    /*background-color: rgb(126, 126, 126, 0.75);*/
+}
+
+.player1 {
+    background-color: rgb(80, 243, 235, 0.85);
+}
+
+.player2 {
+    background-color: rgb(243, 95, 80, 0.85);
+}
+
+/*.matrix {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);*/ /* Adjust width of each column as needed */
+    /*grid-template-rows: repeat(10, 50px);*/ /* Adjust height of each row as needed */
+    /*gap: 10px;*/ /* Adjust gap between cells as needed */
+    /*margin-top: 20px;
+}
+
+.row {
+    height:100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;*/ /* Adjust cell background color as needed */
+    /*border: 1px solid gray;*/ /* Adjust cell border as needed */
+/*}*/
+
+input[type="text"] {
+    height: 75px;
+    width: 100%;
+    background-color: #10111600;
+    margin-bottom: 10px;
+    border: 0px;
+    color: #ffffff;
+    text-align: right;
+    font-size: 25px;
+    font-weight: 50;
+    letter-spacing: 1px;
+}
+
+button {
+    height: 100%;
+    width: 100%;
+    /*width: calc(100% - 10px);
+    margin: 5px;*/
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(126, 126, 126, 0.85);
+    color: rgb(250, 250, 250);
+    font-weight: 500;
+}
+
+.impBtn {
+    background: #5f6368;
+}
+
+.superBtn {
+    background: #8ab4f8;
+}
+
+input:is(:hover, :focus, :active) {
+    background: #262834;
+}
+
+button:is(:hover) {
+    background: #555555;
+}
+
+input:is(:focus, :active),
+button:is(:focus, :active) {
+    outline: none;
+}
